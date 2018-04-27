@@ -12,7 +12,7 @@
 #import <Masonry.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "SynchronizeScrollTop.h"
-@interface CircleViewController ()<MomentPageViewDelegate>
+@interface CircleViewController ()
 @property (nonatomic, strong) UIScrollView *backgroundScrollView;
 @property (nonatomic, strong) MomentPageView *contentView;
 @property (nonatomic, strong) UIImageView *bgmView;
@@ -44,6 +44,7 @@
     
     self.segmentBarView = [[UIView alloc] init];
     self.segmentBarView.backgroundColor = [UIColor greenColor];
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (void)setupPageScroll {
@@ -56,17 +57,15 @@
         
         [[self.currentController rac_signalForSelector:@selector(scrollViewDidScroll:)] subscribeNext:^(id x) {
             UIScrollView *scrollView = [x first];
-            [SynchronizeScrollTop synchronizeBottomScrollView:scrollView TopScrollView:self.backgroundScrollView top:100+45];
+            [SynchronizeScrollTop synchronizeBottomScrollView:scrollView TopScrollView:self.backgroundScrollView top:100];
             
         }];
 
     }
     self.contentView = [[MomentPageView alloc] initWithHeight:Screen_H - 64 - 49 - 100 - 1];
     self.contentView.viewControllerArray = controllerArray;
-    [[self.contentView rac_signalForSelector:@selector(scrollViewDidScroll:)] subscribeNext:^(id x) {
-//        UIScrollView *scrollView = [x first];
-        self.backgroundScrollView.contentOffset = CGPointMake(0, 45);
-    }];
+ 
+
 }
 
 
@@ -74,12 +73,12 @@
 - (void)setupLayout {
     [self.view addSubview:self.backgroundScrollView];
     [self.backgroundScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-//        make.top.mas_equalTo(0);
-//        make.left.top.right.bottom.mas_equalTo(0);
-//        make.bottom.mas_equalTo(0);
-//        make.width.mas_equalTo(Screen_W);
-//        make.height.mas_equalTo(Screen_H - 49 - 64);
+//        make.edges.equalTo(self.view);
+        make.top.mas_equalTo(64);
+        make.left.right.offset = 0;
+        make.bottom.mas_equalTo(-49);
+        make.width.mas_equalTo(Screen_W);
+        make.height.mas_equalTo(Screen_H - 49 - 64);
     }];
     [self.backgroundScrollView addSubview:self.bgmView];
     [self.bgmView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -90,16 +89,16 @@
     [self.backgroundScrollView addSubview:self.segmentBarView];
     [self.segmentBarView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(0);
-        make.top.equalTo(self.bgmView.mas_bottom).mas_equalTo(0);
+        make.top.equalTo(self.bgmView.mas_bottom);
         make.height.mas_equalTo(45);
     }];
     [self.backgroundScrollView insertSubview:self.contentView belowSubview:self.segmentBarView];
 
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).mas_offset(100+45+49);
-        make.bottom.mas_equalTo(0);
-        make.left.right.mas_equalTo(0);
+        make.top.equalTo(self.segmentBarView.mas_bottom);
+        make.left.bottom.right.mas_equalTo(0);
         make.height.mas_equalTo(Screen_H - 64 - 49 - 45 - 1);
     }];
+//    [self.segmentBarView layoutIfNeeded];
 }
 @end
