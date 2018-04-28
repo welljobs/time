@@ -7,7 +7,7 @@
 //
 
 #import "MomentViewController.h"
-#import <Masonry.h>
+#import "Masonry.h"
 
 @interface MomentViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *table;

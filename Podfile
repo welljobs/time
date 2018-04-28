@@ -8,4 +8,5 @@ target 'time' do
   # Pods for time
 pod 'Masonry'
 pod 'ReactiveCocoa', '~> 2.5’
+pod 'YYText'
 end

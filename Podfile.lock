@@ -7,15 +7,18 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
+  - YYText (1.0.5)
 
 DEPENDENCIES:
   - Masonry
   - ReactiveCocoa (~> 2.5)
+  - YYText
 
 SPEC CHECKSUMS:
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  YYText: ac09660c9ccd9b817f409a20caa6f5587444d2ae
 
-PODFILE CHECKSUM: 1918b3ef95d3048922f0a63affd5dd748874c945
+PODFILE CHECKSUM: 893683e0fde2c1f3129146c785f881581c59febd
 
 COCOAPODS: 1.0.1

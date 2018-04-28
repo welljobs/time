@@ -8,7 +8,7 @@
 
 #import "MomentPageView.h"
 #import "MomentViewController.h"
-#import <Masonry.h>
+#import "Masonry.h"
 
 static NSString *kCollectionViewIdentifier = @"CollectionViewIdentifier";
 

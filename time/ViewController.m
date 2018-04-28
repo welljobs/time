@@ -8,7 +8,9 @@
 
 #import "ViewController.h"
 #import "CircleViewController.h"
+#import "MomentsViewController.h"
 #import "BlurCommentView.h"
+#import "CommandViewController.h"
 
 @interface ViewController ()
 
@@ -24,9 +26,18 @@
     [self.navigationController pushViewController:[CircleViewController new] animated:YES];
 }
 - (IBAction)comment:(id)sender {
-    [BlurCommentView commentshowSuccess:^(NSString *commentText) {
+//    [BlurCommentView commentshowSuccess:^(NSString *commentText) {
+//        NSLog(@"正在评论。。。评论内容:%@",commentText);
+//    } withTitle:@""];
+
+    [[CommandViewController commandWithPlaceholder:@"说点什么吧！！！" success:^(NSString *commentText) {
         NSLog(@"正在评论。。。评论内容:%@",commentText);
-    } withTitle:@""];
+    }] showInController:self];
+    
+}
+- (IBAction)post:(id)sender {
+    [self.navigationController pushViewController:[MomentsViewController new] animated:YES];
+
 }
 
 

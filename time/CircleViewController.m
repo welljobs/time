@@ -9,7 +9,7 @@
 #import "CircleViewController.h"
 #import "MomentViewController.h"
 #import "MomentPageView.h"
-#import <Masonry.h>
+#import "Masonry.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "SynchronizeScrollTop.h"
 @interface CircleViewController ()

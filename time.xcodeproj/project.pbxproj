@@ -21,7 +21,11 @@
 		0430E78F209368A40086CDF2 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430E78D209368A40086CDF2 /* UIImageEffects.m */; };
 		0430E792209369010086CDF2 /* BRPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430E791209369010086CDF2 /* BRPlaceholderTextView.m */; };
 		0430E795209369B10086CDF2 /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430E794209369B10086CDF2 /* UIColor+Helper.m */; };
-		17CD288889B9F526F0CF33B8 /* libPods-time.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1EBC7A4BB4FBE275E991A5 /* libPods-time.a */; };
+		0430E7982094C4720086CDF2 /* MomentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430E7972094C4720086CDF2 /* MomentsViewController.m */; };
+		0430E79B2094C5EF0086CDF2 /* FHMessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430E79A2094C5EF0086CDF2 /* FHMessageInputView.m */; };
+		047A29552094D4C10004D941 /* FHMessageMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A29542094D4C10004D941 /* FHMessageMediaCell.m */; };
+		047A29592094DEA10004D941 /* CommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A29582094DEA10004D941 /* CommandViewController.m */; };
+		463381ACF81C8F64C298BAB2 /* Pods_time.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7835E5117D851756A682F19A /* Pods_time.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +55,16 @@
 		0430E791209369010086CDF2 /* BRPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPlaceholderTextView.m; sourceTree = "<group>"; };
 		0430E793209369B10086CDF2 /* UIColor+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
 		0430E794209369B10086CDF2 /* UIColor+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
+		0430E7962094C4720086CDF2 /* MomentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentsViewController.h; sourceTree = "<group>"; };
+		0430E7972094C4720086CDF2 /* MomentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentsViewController.m; sourceTree = "<group>"; };
+		0430E7992094C5EE0086CDF2 /* FHMessageInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHMessageInputView.h; sourceTree = "<group>"; };
+		0430E79A2094C5EF0086CDF2 /* FHMessageInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHMessageInputView.m; sourceTree = "<group>"; };
+		047A29532094D4C10004D941 /* FHMessageMediaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHMessageMediaCell.h; sourceTree = "<group>"; };
+		047A29542094D4C10004D941 /* FHMessageMediaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHMessageMediaCell.m; sourceTree = "<group>"; };
+		047A29572094DEA10004D941 /* CommandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandViewController.h; sourceTree = "<group>"; };
+		047A29582094DEA10004D941 /* CommandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandViewController.m; sourceTree = "<group>"; };
 		05A8B9AE8588B2405114A5FE /* Pods-time.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-time.release.xcconfig"; path = "Pods/Target Support Files/Pods-time/Pods-time.release.xcconfig"; sourceTree = "<group>"; };
-		7D1EBC7A4BB4FBE275E991A5 /* libPods-time.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-time.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7835E5117D851756A682F19A /* Pods_time.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_time.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		833A40F2A4A5FFD27F90D62E /* Pods-time.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-time.debug.xcconfig"; path = "Pods/Target Support Files/Pods-time/Pods-time.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17CD288889B9F526F0CF33B8 /* libPods-time.a in Frameworks */,
+				463381ACF81C8F64C298BAB2 /* Pods_time.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +83,7 @@
 		00ECCA03491589BB55AE110E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7D1EBC7A4BB4FBE275E991A5 /* libPods-time.a */,
+				7835E5117D851756A682F19A /* Pods_time.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -104,6 +116,12 @@
 				0430E76D209228EF0086CDF2 /* ViewController.m */,
 				0430E77D20922AC00086CDF2 /* CircleViewController.h */,
 				0430E77E20922AC00086CDF2 /* CircleViewController.m */,
+				0430E7962094C4720086CDF2 /* MomentsViewController.h */,
+				0430E7972094C4720086CDF2 /* MomentsViewController.m */,
+				0430E7992094C5EE0086CDF2 /* FHMessageInputView.h */,
+				0430E79A2094C5EF0086CDF2 /* FHMessageInputView.m */,
+				047A29532094D4C10004D941 /* FHMessageMediaCell.h */,
+				047A29542094D4C10004D941 /* FHMessageMediaCell.m */,
 				0430E78020922B7F0086CDF2 /* MomentPageView.h */,
 				0430E78120922B7F0086CDF2 /* MomentPageView.m */,
 				0430E78320922D810086CDF2 /* MomentViewController.h */,
@@ -138,6 +156,8 @@
 				0430E78D209368A40086CDF2 /* UIImageEffects.m */,
 				0430E793209369B10086CDF2 /* UIColor+Helper.h */,
 				0430E794209369B10086CDF2 /* UIColor+Helper.m */,
+				047A29572094DEA10004D941 /* CommandViewController.h */,
+				047A29582094DEA10004D941 /* CommandViewController.m */,
 			);
 			path = BlurCommentView;
 			sourceTree = "<group>";
@@ -274,15 +294,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0430E7982094C4720086CDF2 /* MomentsViewController.m in Sources */,
 				0430E788209238700086CDF2 /* SynchronizeScrollTop.m in Sources */,
 				0430E76E209228EF0086CDF2 /* ViewController.m in Sources */,
+				047A29592094DEA10004D941 /* CommandViewController.m in Sources */,
 				0430E76B209228EF0086CDF2 /* AppDelegate.m in Sources */,
 				0430E77F20922AC00086CDF2 /* CircleViewController.m in Sources */,
 				0430E795209369B10086CDF2 /* UIColor+Helper.m in Sources */,
+				047A29552094D4C10004D941 /* FHMessageMediaCell.m in Sources */,
 				0430E78220922B7F0086CDF2 /* MomentPageView.m in Sources */,
 				0430E78F209368A40086CDF2 /* UIImageEffects.m in Sources */,
 				0430E78520922D810086CDF2 /* MomentViewController.m in Sources */,
 				0430E792209369010086CDF2 /* BRPlaceholderTextView.m in Sources */,
+				0430E79B2094C5EF0086CDF2 /* FHMessageInputView.m in Sources */,
 				0430E768209228EF0086CDF2 /* main.m in Sources */,
 				0430E78E209368A40086CDF2 /* BlurCommentView.m in Sources */,
 			);
