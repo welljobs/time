@@ -109,25 +109,18 @@
 		0430E765209228EF0086CDF2 /* time */ = {
 			isa = PBXGroup;
 			children = (
+				0434CD3F209567EB000137B1 /* Moments */,
 				0430E789209368A40086CDF2 /* BlurCommentView */,
 				0430E769209228EF0086CDF2 /* AppDelegate.h */,
 				0430E76A209228EF0086CDF2 /* AppDelegate.m */,
 				0430E76C209228EF0086CDF2 /* ViewController.h */,
 				0430E76D209228EF0086CDF2 /* ViewController.m */,
-				0430E77D20922AC00086CDF2 /* CircleViewController.h */,
-				0430E77E20922AC00086CDF2 /* CircleViewController.m */,
 				0430E7962094C4720086CDF2 /* MomentsViewController.h */,
 				0430E7972094C4720086CDF2 /* MomentsViewController.m */,
 				0430E7992094C5EE0086CDF2 /* FHMessageInputView.h */,
 				0430E79A2094C5EF0086CDF2 /* FHMessageInputView.m */,
 				047A29532094D4C10004D941 /* FHMessageMediaCell.h */,
 				047A29542094D4C10004D941 /* FHMessageMediaCell.m */,
-				0430E78020922B7F0086CDF2 /* MomentPageView.h */,
-				0430E78120922B7F0086CDF2 /* MomentPageView.m */,
-				0430E78320922D810086CDF2 /* MomentViewController.h */,
-				0430E78420922D810086CDF2 /* MomentViewController.m */,
-				0430E786209238700086CDF2 /* SynchronizeScrollTop.h */,
-				0430E787209238700086CDF2 /* SynchronizeScrollTop.m */,
 				0430E76F209228EF0086CDF2 /* Main.storyboard */,
 				0430E772209228EF0086CDF2 /* Assets.xcassets */,
 				0430E774209228EF0086CDF2 /* LaunchScreen.storyboard */,
@@ -160,6 +153,21 @@
 				047A29582094DEA10004D941 /* CommandViewController.m */,
 			);
 			path = BlurCommentView;
+			sourceTree = "<group>";
+		};
+		0434CD3F209567EB000137B1 /* Moments */ = {
+			isa = PBXGroup;
+			children = (
+				0430E77D20922AC00086CDF2 /* CircleViewController.h */,
+				0430E77E20922AC00086CDF2 /* CircleViewController.m */,
+				0430E78020922B7F0086CDF2 /* MomentPageView.h */,
+				0430E78120922B7F0086CDF2 /* MomentPageView.m */,
+				0430E78320922D810086CDF2 /* MomentViewController.h */,
+				0430E78420922D810086CDF2 /* MomentViewController.m */,
+				0430E786209238700086CDF2 /* SynchronizeScrollTop.h */,
+				0430E787209238700086CDF2 /* SynchronizeScrollTop.m */,
+			);
+			name = Moments;
 			sourceTree = "<group>";
 		};
 		9F3BFFB88780AA10E0E35A2F /* Pods */ = {

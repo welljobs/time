@@ -7,6 +7,7 @@ target 'time' do
 
   # Pods for time
 pod 'Masonry'
-pod 'ReactiveCocoa', '~> 2.5’
 pod 'YYText'
+pod 'ReactiveCocoa', '~> 2.5’
+#pod 'SDCycleScrollView', '~> 1.65'
 end

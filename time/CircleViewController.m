@@ -62,7 +62,7 @@
         }];
 
     }
-    self.contentView = [[MomentPageView alloc] initWithHeight:Screen_H - 64 - 49 - 100 - 1];
+    self.contentView = [[MomentPageView alloc] initWithHeight:Screen_H - 64 - 49 - 100 - 45 - 1];
     self.contentView.viewControllerArray = controllerArray;
  
 
@@ -97,7 +97,7 @@
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.segmentBarView.mas_bottom);
         make.left.bottom.right.mas_equalTo(0);
-        make.height.mas_equalTo(Screen_H - 64 - 49 - 45 - 1);
+        make.height.mas_equalTo(Screen_H - 64 - 49 - 45 - 100 - 1);
     }];
 //    [self.segmentBarView layoutIfNeeded];
 }
