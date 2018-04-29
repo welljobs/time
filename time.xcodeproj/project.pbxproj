@@ -23,6 +23,7 @@
 		0430E795209369B10086CDF2 /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430E794209369B10086CDF2 /* UIColor+Helper.m */; };
 		0430E7982094C4720086CDF2 /* MomentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430E7972094C4720086CDF2 /* MomentsViewController.m */; };
 		0430E79B2094C5EF0086CDF2 /* FHMessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430E79A2094C5EF0086CDF2 /* FHMessageInputView.m */; };
+		0434CD4220957098000137B1 /* MomentBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0434CD4120957098000137B1 /* MomentBarView.m */; };
 		047A29552094D4C10004D941 /* FHMessageMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A29542094D4C10004D941 /* FHMessageMediaCell.m */; };
 		047A29592094DEA10004D941 /* CommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A29582094DEA10004D941 /* CommandViewController.m */; };
 		463381ACF81C8F64C298BAB2 /* Pods_time.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7835E5117D851756A682F19A /* Pods_time.framework */; };
@@ -59,6 +60,8 @@
 		0430E7972094C4720086CDF2 /* MomentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentsViewController.m; sourceTree = "<group>"; };
 		0430E7992094C5EE0086CDF2 /* FHMessageInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHMessageInputView.h; sourceTree = "<group>"; };
 		0430E79A2094C5EF0086CDF2 /* FHMessageInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHMessageInputView.m; sourceTree = "<group>"; };
+		0434CD4020957098000137B1 /* MomentBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentBarView.h; sourceTree = "<group>"; };
+		0434CD4120957098000137B1 /* MomentBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentBarView.m; sourceTree = "<group>"; };
 		047A29532094D4C10004D941 /* FHMessageMediaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHMessageMediaCell.h; sourceTree = "<group>"; };
 		047A29542094D4C10004D941 /* FHMessageMediaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHMessageMediaCell.m; sourceTree = "<group>"; };
 		047A29572094DEA10004D941 /* CommandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandViewController.h; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 				0430E78420922D810086CDF2 /* MomentViewController.m */,
 				0430E786209238700086CDF2 /* SynchronizeScrollTop.h */,
 				0430E787209238700086CDF2 /* SynchronizeScrollTop.m */,
+				0434CD4020957098000137B1 /* MomentBarView.h */,
+				0434CD4120957098000137B1 /* MomentBarView.m */,
 			);
 			name = Moments;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 				047A29552094D4C10004D941 /* FHMessageMediaCell.m in Sources */,
 				0430E78220922B7F0086CDF2 /* MomentPageView.m in Sources */,
 				0430E78F209368A40086CDF2 /* UIImageEffects.m in Sources */,
+				0434CD4220957098000137B1 /* MomentBarView.m in Sources */,
 				0430E78520922D810086CDF2 /* MomentViewController.m in Sources */,
 				0430E792209369010086CDF2 /* BRPlaceholderTextView.m in Sources */,
 				0430E79B2094C5EF0086CDF2 /* FHMessageInputView.m in Sources */,

@@ -12,11 +12,13 @@
 #import "Masonry.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "SynchronizeScrollTop.h"
+#import "MomentBarView.h"
+#import "UIColor+Helper.h"
 @interface CircleViewController ()
 @property (nonatomic, strong) UIScrollView *backgroundScrollView;
 @property (nonatomic, strong) MomentPageView *contentView;
 @property (nonatomic, strong) UIImageView *bgmView;
-@property (nonatomic, strong) UIView *segmentBarView;
+@property (nonatomic, strong) MomentBarView *segmentBarView;
 @property (nonatomic, strong) MomentViewController *currentController;
 
 
@@ -42,14 +44,20 @@
     self.bgmView = [[UIImageView alloc] init];
     self.bgmView.backgroundColor = [UIColor redColor];
     
-    self.segmentBarView = [[UIView alloc] init];
+    self.segmentBarView = [[MomentBarView alloc] init];
+    self.segmentBarView.viewControllerArray = @[@"全部",@"圈子",@"社区"];
     self.segmentBarView.backgroundColor = [UIColor greenColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    [self.segmentBarView setUpTitleEffect:^(UIColor *__autoreleasing *titleScrollViewColor, UIColor *__autoreleasing *norColor, UIColor *__autoreleasing *selColor, UIFont *__autoreleasing *titleFont, CGFloat *titleHeight, CGFloat *titleWidth) {
+        *norColor = [UIColor colorWithHex:0X1A192B];
+        *selColor = [UIColor colorWithHex:0XFFC000];
+    }];
 }
 
 - (void)setupPageScroll {
     NSMutableArray *controllerArray = [NSMutableArray array];
-    for (NSInteger i = 0; i < 3; i++) {
+    NSArray *title = @[@"全部",@"圈子",@"社区"];
+    for (NSInteger i = 0; i < title.count; i++) {
         
         self.currentController = [[MomentViewController alloc] init];
         self.currentController.type = i;
@@ -64,7 +72,11 @@
     }
     self.contentView = [[MomentPageView alloc] initWithHeight:Screen_H - 64 - 49 - 100 - 45 - 1];
     self.contentView.viewControllerArray = controllerArray;
- 
+    
+    self.contentView.scrollToIndexBlock = ^(NSInteger index) {
+//        self.segmentBarView.selectIndex = index;
+        NSLog(@"-------%lu",index);
+    };
 
 }
 
