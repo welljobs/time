@@ -27,6 +27,7 @@
 		047A29552094D4C10004D941 /* FHMessageMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A29542094D4C10004D941 /* FHMessageMediaCell.m */; };
 		047A29592094DEA10004D941 /* CommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A29582094DEA10004D941 /* CommandViewController.m */; };
 		463381ACF81C8F64C298BAB2 /* Pods_time.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7835E5117D851756A682F19A /* Pods_time.framework */; };
+		BDF03EEE224D156400640765 /* WebSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF03EED224D156400640765 /* WebSocketManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,8 @@
 		05A8B9AE8588B2405114A5FE /* Pods-time.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-time.release.xcconfig"; path = "Pods/Target Support Files/Pods-time/Pods-time.release.xcconfig"; sourceTree = "<group>"; };
 		7835E5117D851756A682F19A /* Pods_time.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_time.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		833A40F2A4A5FFD27F90D62E /* Pods-time.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-time.debug.xcconfig"; path = "Pods/Target Support Files/Pods-time/Pods-time.debug.xcconfig"; sourceTree = "<group>"; };
+		BDF03EEC224D156400640765 /* WebSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocketManager.h; sourceTree = "<group>"; };
+		BDF03EED224D156400640765 /* WebSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebSocketManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 		0430E765209228EF0086CDF2 /* time */ = {
 			isa = PBXGroup;
 			children = (
+				BDF03EEB224D154400640765 /* Socket */,
 				0434CD3F209567EB000137B1 /* Moments */,
 				0430E789209368A40086CDF2 /* BlurCommentView */,
 				0430E769209228EF0086CDF2 /* AppDelegate.h */,
@@ -184,6 +188,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BDF03EEB224D154400640765 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				BDF03EEC224D156400640765 /* WebSocketManager.h */,
+				BDF03EED224D156400640765 /* WebSocketManager.m */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,7 +209,6 @@
 				0430E760209228EF0086CDF2 /* Frameworks */,
 				0430E761209228EF0086CDF2 /* Resources */,
 				9590E17E1F884B355C8E174C /* [CP] Embed Pods Frameworks */,
-				8DB0471CA2200526AA20E8B0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,30 +267,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8DB0471CA2200526AA20E8B0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-time/Pods-time-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9590E17E1F884B355C8E174C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-time/Pods-time-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
+				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -291,13 +299,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-time-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -314,6 +325,7 @@
 				0430E76B209228EF0086CDF2 /* AppDelegate.m in Sources */,
 				0430E77F20922AC00086CDF2 /* CircleViewController.m in Sources */,
 				0430E795209369B10086CDF2 /* UIColor+Helper.m in Sources */,
+				BDF03EEE224D156400640765 /* WebSocketManager.m in Sources */,
 				047A29552094D4C10004D941 /* FHMessageMediaCell.m in Sources */,
 				0430E78220922B7F0086CDF2 /* MomentPageView.m in Sources */,
 				0430E78F209368A40086CDF2 /* UIImageEffects.m in Sources */,

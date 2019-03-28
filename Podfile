@@ -9,5 +9,7 @@ target 'time' do
 pod 'Masonry'
 pod 'YYText'
 pod 'ReactiveCocoa', '~> 2.5’
+pod 'SocketRocket'
+pod 'JSONModel'
 #pod 'SDCycleScrollView', '~> 1.65'
 end

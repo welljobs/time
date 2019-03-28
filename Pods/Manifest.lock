@@ -1,4 +1,5 @@
 PODS:
+  - JSONModel (1.8.0)
   - Masonry (1.0.1)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -7,18 +8,31 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
+  - SocketRocket (0.5.1)
   - YYText (1.0.5)
 
 DEPENDENCIES:
+  - JSONModel
   - Masonry
   - ReactiveCocoa (~> 2.5)
+  - SocketRocket
   - YYText
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JSONModel
+    - Masonry
+    - ReactiveCocoa
+    - SocketRocket
+    - YYText
+
 SPEC CHECKSUMS:
+  JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   YYText: ac09660c9ccd9b817f409a20caa6f5587444d2ae
 
-PODFILE CHECKSUM: bca29ebed85356a23e778fba88ce83fdbe6614e9
+PODFILE CHECKSUM: 2fc5daea05e6089cc78c874b19cb3f8e3999b270
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.5.3
