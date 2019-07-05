@@ -21,6 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
+    
+    
+    
 }
 - (IBAction)timeline:(id)sender {
     [self.navigationController pushViewController:[CircleViewController new] animated:YES];
